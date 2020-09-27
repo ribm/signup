@@ -1,0 +1,23 @@
+{
+  "name": "login-shortning",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.5",
+    "crypto-js": "^4.0.0",
+    "debug": "~2.6.9",
+    "ejs": "^3.1.5",
+    "express": "^4.16.4",
+    "http-errors": "^1.6.3",
+    "jade": "~1.11.0",
+    "mongodb": "^3.6.2",
+    "mongoose": "^5.10.7",
+    "morgan": "^1.9.1",
+    "nodemailer": "^6.4.11",
+    "nodemon": "^2.0.4"
+  }
+}

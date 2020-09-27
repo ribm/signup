@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id='mail' type="text" value="mail_id">
+    <input type="text"value='new_password' name="new_password" id="change_password">
+    <input type="button" value="update" onclick="login1()">
+
+
+    <script>
+        async function login1(){
+            //console.log(document.getElementById("email").value)
+            console.log(document.querySelectorAll('*[id]'))
+            var mail = document.getElementById("mail").value
+            var  password = document.getElementById('change_password').value
+            console.log(mail);
+            console.log(password)
+            let user = {
+            mail: mail,
+            password: password
+            };
+            console.log(user)
+            let response = await fetch('http://127.0.0.1:3000/forgot_password/update', {
+            method: 'POST',
+            headers: {
+            'Content-Type': 'application/json;charset=utf-8'
+            },
+            body: JSON.stringify(user)
+            });
+            let result = await response.json();
+                alert(result.message);
+            
+        }
+
+        
+    </script>
+</body>
+</html>
